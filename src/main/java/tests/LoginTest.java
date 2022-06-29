@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import utils.BasePage;
 import utils.BaseTest;
+import utils.ReadPropertiesFile;
 
 public class LoginTest extends BaseTest{
 
@@ -12,9 +13,7 @@ public class LoginTest extends BaseTest{
 		
 		app.navMenu.navigateTo(app.navMenu.loginPopUp);
 		app.loginPage.loginInApp(app.loginPage.username, app.loginPage.password);
-		
-		
-		
+
 		
 		Thread.sleep(4000);
 		
