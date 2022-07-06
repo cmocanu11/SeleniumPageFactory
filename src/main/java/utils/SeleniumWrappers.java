@@ -22,9 +22,11 @@ public class SeleniumWrappers {
 
 	public void hoverElement(WebElement element){
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		Log.info("Called explicit wait");
 		wait.until(ExpectedConditions.visibilityOf(element));
 		Actions action = new Actions(driver);
 		action.moveToElement(element).perform();
+		Log.info("Moved to elemenet");
 	}
 
 	public void dragAndDrop(WebElement element, int xOffset, int yOffset){
@@ -78,14 +80,15 @@ public class SeleniumWrappers {
 	public void click(WebElement element) {
 		
 		try {
-			//Log.info("called method click on <element>")
-			System.out.println("Called click etc..");
+			Log.info("called method click on <element>" + element.getAttribute("outterHTML"));
+//			System.out.println("Called click etc..");
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
 			
 		}catch(Exception e) {
-			//Log.error(".....")
+			Log.error("Click method failed");
+			Log.error(e.fillInStackTrace());
 		}
 	}
 

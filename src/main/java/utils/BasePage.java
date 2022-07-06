@@ -10,6 +10,9 @@ public class BasePage extends BaseTest {
 	public PostFormatsPage postFormatsPage = new PostFormatsPage(driver);
 	public ContactsPage contactsPage = new ContactsPage(driver);
 	public ShopPage shopPage = new ShopPage(driver);
+	public EventsPage eventsPage = new EventsPage(driver);
+	public SingleEventPage singleEventPage = new SingleEventPage(driver);
+	public ProductPage productPage = new ProductPage(driver);
 
 	public SeleniumWrappers se = new SeleniumWrappers(driver);
 	
