@@ -18,5 +18,6 @@ public class PostFormatsPage extends SeleniumWrappers {
     @FindBy(css = "span[class='mejs-time-handle']") public WebElement progressSlider;
     @FindBy(css = "div[class='mejs-horizontal-volume-current']") public WebElement volumeControl;
     @FindBy(css = "div[class*='mejs-playpause-button']") public WebElement playPauseButton;
+    @FindBy(xpath = "//a[contains(text(),'Gallery Format')]")public WebElement galleryFormatLink;
 
 }
